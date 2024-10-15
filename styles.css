@@ -4,9 +4,20 @@
   box-sizing: border-box;
 }
 
+header, 
+section h2, 
+section h3 {
+  font-family: 'Bungee', cursive;
+  font-weight: normal;
+}
+
+body, input, textarea {
+  font-family: 'Roboto', sans-serif;
+}
+
 header {
   padding: 16px 0;
-  background-color: #182c61;
+  background-color: #ffe601;
   color: #ecf0f1;
 }
 
@@ -27,8 +38,132 @@ header nav li a {
   margin: 0 auto;
 }
 
-header .container {
+header .container,
+section .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.brands-list img {
+  height: 24px;
+}
+
+.brands-list li {
+  display: inline;
+  margin-right: 8px;
+}
+
+section .container {
+  align-items: flex-start;
+}
+
+section {
+  padding: 24px 0;
+  color: #ffe601;
+}
+
+section h2 {
+  margin-bottom: 16px;
+  color: #ffe601;
+}
+
+section {
+  color: #606262;
+}
+
+section p {
+  margin-bottom: 8px;
+}
+
+/* Estilos para a imagem .store-front */
+.store-front {
+  width: 100%; /* A imagem ocupará 100% da largura do container pai */
+  max-width: 600px; /* Define um limite de tamanho máximo para a imagem */
+  height: auto; /* Mantém a proporção da imagem */
+  margin-right: 32px;
+}
+
+/* Estilos responsivos para dispositivos menores */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .store-front {
+    margin-right: 0;
+    margin-bottom: 16px;
+  }
+  
+  .contact-methods {
+    flex-direction: column;
+  }
+
+  form input, 
+  form textarea,
+  form button {
+    width: 100%; /* O input ocupará 100% da largura no mobile */
+  }
+}
+
+.social-links img {
+  height: 24px;
+}
+
+.social-links li {
+  display: inline;
+  margin-right: 8px;
+}
+
+.social-links li a {
+  text-decoration: none;
+}
+
+#contact .container {
+  display: block;
+}
+
+.contact-methods {
+  justify-content: space-between;
+  display: flex;
+}
+
+form input, 
+form textarea,
+form button {
+  display: block;
+  width: 320px;
+  margin-bottom: 8px;
+  padding: 8px;
+}
+
+form textarea {
+  resize: none;
+  height: 180px;
+}
+
+section h3 {
+  margin-bottom: 16px;
+}
+
+form button {
+  background-color: #ffe601;
+  color: #ecf0f1;
+  border: none;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #d2be09;
+}
+
+input:focus, textarea:focus {
+  outline-color: #606262;
+}
+
+footer {
+  background-color: #ffe601;
+  color: #606262;
+  padding: 16px 0;
 }
